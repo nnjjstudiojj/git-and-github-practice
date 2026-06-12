@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+import javax.swing.JMenu;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,7 +7,8 @@ public class Main {
         JFrame frame = new JFrame("Snake Game");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
 
-        frame.add(new gamePanel());
+        JMenu menu = new JMenu();
+        frame.add(menu); 
 
         frame.pack();
         frame.setResizable(false);
