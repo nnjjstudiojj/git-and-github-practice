@@ -1,37 +1,34 @@
+import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.Dimension;
+import java.awt.GridLayout;
 
 public class Main {
     public static void main(String[] args) {
 
-        JFrame frame = new JFrame("Snake Game");
+        JFrame frame = new JFrame("Git Practice Game");
         frame.setSize(400, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
 
-        JMenuBar menuBar = new JMenuBar();
+        JButton snakeButton = new JButton("Snake game");
+        snakeButton.setPreferredSize(new Dimension(100,50));
+        JButton pongButton = new JButton("Pong game");
+        pongButton.setPreferredSize(new Dimension(100,50));
+        JButton chessButton = new JButton("Chess game");
+        chessButton.setPreferredSize(new Dimension(100,50));
 
-        JMenu gamesMenu = new JMenu("Games");
+        snakeButton.addActionListener(e -> System.out.println("Launching snake"));
+        pongButton.addActionListener(e -> System.out.println("Launching pong"));
+        chessButton.addActionListener(e -> System.out.println("Launching chess"));
 
-        JMenuItem snakeGame = new JMenuItem("Snake");
-        JMenuItem pongGame = new JMenuItem("Pong");
-        JMenuItem chessGame = new JMenuItem("Chess");
-
-        snakeGame.addActionListener(e -> System.out.println("Running snake game"));
-        chessGame.addActionListener(e -> System.out.println("Running chess game"));
-        pongGame.addActionListener(e -> System.out.println("Running pong game"));
-
-        gamesMenu.add(snakeGame);
-        gamesMenu.add(pongGame);
-        gamesMenu.add(chessGame);
-
-        menuBar.add(gamesMenu);
-        frame.setJMenuBar(menuBar);
-         
+        frame.setLayout(new GridLayout(1, 3));
+        
+        frame.add(snakeButton);
+        frame.add(pongButton);
+        frame.add(chessButton);
+        
         frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
 
         frame.setVisible(true);
     }
