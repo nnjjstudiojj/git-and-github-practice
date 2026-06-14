@@ -1,13 +1,17 @@
-import java.awt.Color;
-import java.awt.Dimension;
+import java.awt.Graphics;
+
 import javax.swing.JPanel;
 
-public class gamePanel extends JPanel{
+public abstract class gamePanel extends JPanel{
+   
+    public abstract void gameUpdates();
 
-    
-    public gamePanel () { 
+    public abstract void render(Graphics g);
 
-        setPreferredSize(new Dimension(1000, 700));
-        setBackground(Color.WHITE);
+    @Override
+    public void paintComponents(Graphics g) {
+
+        super.paintComponents(g);
+        render(g);
     }
 }
