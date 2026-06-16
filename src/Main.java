@@ -2,7 +2,6 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JPanel;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +9,7 @@ public class Main {
         int width = 400;
         int height = 300;
 
-        JFrame frame = new JFrame("Snake Game");
+        JFrame frame = new JFrame("git demo");
         frame.setSize(width, height);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
 
@@ -42,7 +41,7 @@ public class Main {
         frame.setVisible(true);
     }
 
-    public static void runFrame(gamePanel panel, String name) {
+    private static void runFrame(gamePanel panel, String name) {
 
         JFrame frame = new JFrame(name);
         
