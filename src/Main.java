@@ -49,6 +49,7 @@ public class Main {
         frame.add(panel);
         frame.pack();
         frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
         frame.setVisible(true);
     }
 }
