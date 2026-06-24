@@ -1,5 +1,4 @@
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics;
 
 public class snakePanel extends gamePanel{
@@ -11,8 +10,7 @@ public class snakePanel extends gamePanel{
 
     public snakePanel() {
 
-        this.setPreferredSize(new Dimension(width, height));
-        this.setBackground(new Color(10, 200, 10));
+        super(600, 600, 10, 200, 10);
     }
 
     @Override
