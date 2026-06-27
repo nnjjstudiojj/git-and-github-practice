@@ -6,8 +6,8 @@ import javax.swing.JMenuItem;
 public class Main {
     public static void main(String[] args) {
 
-        int width = 400;
-        int height = 300;
+        final int width = 400;
+        final int height = 300;
 
         JFrame frame = new JFrame("git demo");
         frame.setSize(width, height);
@@ -27,7 +27,10 @@ public class Main {
         });
 
         chessGame.addActionListener(e -> System.out.println("Running chess game"));
-        pongGame.addActionListener(e -> System.out.println("Running pong game"));
+        pongGame.addActionListener(e -> {
+            frame.dispose();
+            runFrame(new pongPanel(), "Pong");
+        });
 
         gamesMenu.add(snakeGame);
         gamesMenu.add(pongGame);

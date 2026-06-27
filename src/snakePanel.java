@@ -19,10 +19,9 @@ public class snakePanel extends gamePanel{
     }
 
     @Override
-    public void paintComponent(Graphics g) {
-        super.paintComponent(g);
+    public void render(Graphics g) {
 
-        g.setColor(new Color(50, 100, 50));
+      g.setColor(new Color(50, 100, 50));
 
         for (int i = 0; i <= width / cellSize; i ++) {
 
@@ -33,6 +32,7 @@ public class snakePanel extends gamePanel{
 
             g.drawLine(0, i * cellSize, width, i * cellSize);
         }
+
     }
 
     @Override

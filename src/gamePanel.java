@@ -1,6 +1,7 @@
 import javax.swing.JPanel;
 import java.awt.Dimension;
 import java.awt.Color;
+import java.awt.Graphics;
 
 public abstract class gamePanel extends JPanel{
 
@@ -15,4 +16,12 @@ public abstract class gamePanel extends JPanel{
 
     public abstract void initialiseGame();
 
+    @Override
+    public void paintComponent(Graphics g) {
+
+      super.paintComponent(g);
+      render(g);
+    }
+
+    public abstract void render(Graphics graphics);
 }
