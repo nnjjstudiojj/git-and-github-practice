@@ -11,9 +11,9 @@ public class pongPanel extends gamePanel{
     }
 
     @Override
-    public void gameUpdates() {
+    public void gameLogic() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'gameUpdates'");
+        throw new UnsupportedOperationException("Unimplemented method 'gameLogic'");
     }
 
     @Override

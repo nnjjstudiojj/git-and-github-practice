@@ -5,6 +5,8 @@ import java.awt.Graphics;
 
 public abstract class gamePanel extends JPanel{
 
+    public boolean running;
+
     public gamePanel(int width, int height, int R, int G, int B) {
 
         this.setPreferredSize(new Dimension(width, height));
@@ -12,7 +14,15 @@ public abstract class gamePanel extends JPanel{
 
     }
    
-    public abstract void gameUpdates();
+    public void gameUpdates() {
+
+      if (running) {
+        gameLogic();
+        repaint();
+      } 
+    }
+
+    public abstract void gameLogic();
 
     public abstract void initialiseGame();
 
@@ -23,5 +33,5 @@ public abstract class gamePanel extends JPanel{
       render(g);
     }
 
-    public abstract void render(Graphics graphics);
+    public abstract void render(Graphics graphics); 
 }

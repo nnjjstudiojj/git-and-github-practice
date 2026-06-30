@@ -14,8 +14,9 @@ public class snakePanel extends gamePanel{
     }
 
     @Override
-    public void gameUpdates() {
-        repaint();
+    public void gameLogic() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'gameLogic'");
     }
 
     @Override
